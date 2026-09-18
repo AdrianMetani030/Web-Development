@@ -1,0 +1,176 @@
+h1 {
+    font-size: 100px;
+    color: rgb(255, 0, 0);
+    background-color: yellow;
+    text-align: center;
+    padding: 20px;
+
+    /* Hm.. why is there so much space between the h1 and the buttons? */
+    /* This is because the h1 has a default margin of about 20px, which is the space around it. */
+    /* It goes content -> padding -> border -> margin (margin is invisbile) */
+
+    margin: 0px; /* look at that! we set the margin to 0px. now there is no space
+    between the h1 and the stuff under it. But, you can still see the padding, which is clearly
+    indicated by the yellow background color. This is why we say that the margin is
+    "invisible", and the padding is not.
+    */
+
+    /* lets set it back tho, for stylistic purposes */
+
+    margin: 5px;
+    
+
+}
+
+
+.special-h1 {
+    font-size: 50px;
+/* notice how this text still turns red? this is bc the h1 still applies to this h1, since
+this is still technically considered a h1. However, this one gets priority. so if we set the colour here, 
+it cannt get overridden by the h1. but anything not specified here will get applied from the top h1. */
+    background-color: turquoise;
+    color: blue;
+
+}
+
+
+
+.special-button {
+    background-color: black;
+    color: white;
+    width: 200px;
+    border-color: red;
+    border-radius: 30px;
+
+}
+
+.another-special-button {
+    background-color: violet;
+    width: 200px;
+    padding: 15px 40px; /* this is a trick for doing top/bottom and left/right padding */
+    margin: 3px;
+    border: solid blue;
+
+}
+/* new syntax: (borders)
+
+selector {
+  border: border-width border-style border-color; (order doesnt matter)
+  by default, border-style is solid, width is 3, and color is black
+}
+
+*/
+
+
+body {
+
+
+    background-color: red;
+    margin: 0px; /* this is to remove the default margin that the body has, which is roughly 8px
+    */
+}
+
+
+p {
+    color: white;
+    
+
+}
+
+.cool-paragraph {
+    color: blue;
+    background-color: rgb(179, 255, 191);
+    text-align: center;
+    padding: 10px;
+    font-size: 50px;
+    border: dashed rgb(0, 253, 63) 20px;
+    
+
+
+}
+
+
+
+.button-container {
+    display: flex; /* this is a new property that allows 
+    you to make the elements of a container 
+    in a row, instead of a column. However, buttons are inline elements
+    so they already appear as like a row instead of starting on a new
+    line everytime. Look what happens when you enable flexbox on a 
+    paragraph element: */
+  
+    gap: 20px;
+    justify-content: center;
+
+}
+
+.paragraph-elements1 {
+
+    
+/* Look! now the paragraphs are on the same line! This is because we set the display to flex, which makes the elements of this container appear in a row instead of a column. */
+   
+    display: flex;
+
+
+/* So, there is another property called flex-direction. By default, flex
+direction is set to row, which is why the elements appear in a row when we 
+do display:flex. howeverm with flex-direction we can do:
+
+flex-direction: column
+flex-direction: row-reverse
+flex-direction: column-reverse
+
+Which is all we need for now with this property. 
+
+Now, lets look at another property called justify-content. 
+This property allows us to change the alignment of the elements 
+in the flex container. By default, it is set to flex-start, 
+which is why the elements are aligned to the left. 
+
+Now, remember how we made flex-direction row? This means that all 
+elements will be arranged along the main, x axis, which is horizontal.
+So therefore, justify-content will also work along the main axis, and align that way.
+*/
+    flex-direction: column;
+    justify-content: flex-start; /* (is the default) */
+    justify-content: flex-end; 
+    justify-content: center; /* note: center is not "flex-center" 
+    careful. This line above like whilst we have it on "center"
+    it will center it vertically if you get what im saying, so not on 
+    the middle of the page. To align items horizontally when in a column
+    layout, that is where "align-items" comes into effect. 
+
+you can change the main axis by doing;
+flex-direction: column;
+
+And then, justify content would now work vertically! (kind of) 
+
+
+So, justify content controls the MAIN AXIS. (by default horizontal,
+can be changed to vertical with flex-direction: column)
+
+And align items controls the cross-axis. So now to like actually put
+it in the middle we would do this: */
+
+    align-items: center;
+
+}
+
+
+/* learning space-between, space-evenly, space-around; all justify-content properties */
+
+.paragraph-elements2 {
+
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+
+}
+
+.paragraph-elements2 p { /* worry about this tmr lol */
+    color: rgb(255, 230, 0);
+}

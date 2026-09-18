@@ -1,0 +1,83 @@
+/* here is my css code!: */
+
+
+
+h1 {
+    color: rgb(43, 43, 255);
+    font-size: 100px;
+    text-align: center; 
+    background-color: rgba(18, 188, 255, 0.24) 
+
+}
+
+h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+body {
+    background-color: rgb(240, 240, 241);
+}
+
+
+/* wTF JUST happened?? Heres the syntax:
+
+selector {
+    property: value;
+}
+
+note: propertys that are multiple words are hyphenated, like font-size. 
+You also need semi colons ; after each propery value pair
+*/
+
+
+p {
+    color: red;
+    font-size: 20px;
+    text-align: left;
+}
+
+
+/* this will make the button big but keep the text smal!! */
+button {
+    font-size: 10px;
+    width: 100px;
+    height: 20px;
+    background-color: green;
+
+}
+
+
+/* note: this will not change anything! it just makes the invisible
+box around it larger. Which you can see in real time with backgroundcolour .
+Use fontsize to make bigger */
+
+h6 {
+    width: 85px;
+    background-color: purple;
+}
+
+/* look i can open another h1 tag, and how it works is that it will combine the 
+two property changes, and any properties that are the same, will get replaced
+by the last one. so in this case, the colour will update to orange:
+
+
+h1 {
+    color: orange;
+
+}
+
+*/
+
+body {
+    background-color: rgb(240, 240, 241);
+}
+
+
+
+
+
+img {
+    width: 100px;
+    height: 100px;
+}
